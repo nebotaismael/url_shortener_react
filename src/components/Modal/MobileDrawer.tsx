@@ -45,7 +45,7 @@ const MobileDrawer: React.FC<NavbarProps> = ({ toggle, setToggle }) => {
           </Typography>
           <hr /> */}
 
-          <AppbarLinks flexDirection="column"  alignItems='end'>
+          <AppbarLinks flexDirection="column" alignItems="end">
             <AppbarItem variant="body1">
               <Link to="/">Home</Link>
             </AppbarItem>

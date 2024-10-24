@@ -1,12 +1,8 @@
 import { createSlice } from "@reduxjs/toolkit";
 import { shortenUrl } from "./shortenerThunk";
 import { toast } from "react-toastify";
+import { UrlState } from "../../utils/urls";
 
-interface UrlState {
-  urls: { original: string; shortened: string }[];
-  isLoading: boolean;
-  error: string | null;
-}
 
 const initialState: UrlState = {
   urls: [],

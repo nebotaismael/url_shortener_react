@@ -1,6 +1,5 @@
 import { createAsyncThunk } from '@reduxjs/toolkit';
 import axios from 'axios';
-import { toast } from 'react-toastify';
 
 
 export interface ShortenedUrl {
@@ -35,7 +34,6 @@ export const shortenUrl = createAsyncThunk<
     } catch (error) {
  
       console.error('Error during URL shortening:', error);
-      // Simplified error handling with a single string
       return rejectWithValue('Failed to shorten URL');
     }
   }

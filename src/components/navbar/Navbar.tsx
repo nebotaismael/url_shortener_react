@@ -12,7 +12,6 @@ import {
   Hamburger,
 } from "./Navbar.styles";
 
-
 import MenuIcon from "@mui/icons-material/Menu";
 import LightModeIcon from "@mui/icons-material/LightMode";
 import DarkModeIcon from "@mui/icons-material/DarkMode";
@@ -41,23 +40,27 @@ const Navbar: React.FC<NavbarProps> = ({
   const mobile = useMediaQuery(theme.breakpoints.down("sm"));
   const [light, setLight] = useState(true);
 
-
   const handelThemeMode = () => {
     setLight(!light);
     setToggleTheme(!toggleTheme);
   };
 
-
   return (
     <AppbarContainer>
       <AppbarBrand>
         {mobile ? (
-          <Link to={'/'}> <img src={logo} alt="VES" /></Link>
+          <Link to={"/"}>
+            {" "}
+            <img src={logo} alt="VES" />
+          </Link>
         ) : (
-          <Link to={'/'}> <img src={logo} alt="VES" /></Link>
+          <Link to={"/"}>
+            {" "}
+            <img src={logo} alt="VES" />
+          </Link>
         )}
       </AppbarBrand>
-  
+
       <AppbarCTA>
         {!matches && (
           <AppbarLinks>
@@ -79,7 +82,6 @@ const Navbar: React.FC<NavbarProps> = ({
           </AppbarLinks>
         )}
         <AppbarButton>
-      
           {!mobile &&
             (light ? (
               <CustomButton
@@ -90,10 +92,8 @@ const Navbar: React.FC<NavbarProps> = ({
                 }}
                 onClick={() => handelThemeMode()}
               >
-     
                 Light Mode
                 <LightModeIcon sx={{ fontSize: "18px" }} />
-    
               </CustomButton>
             ) : (
               <CustomButton
@@ -104,13 +104,10 @@ const Navbar: React.FC<NavbarProps> = ({
                 }}
                 onClick={() => handelThemeMode()}
               >
-          
                 Dark Mode
                 <DarkModeIcon sx={{ fontSize: "15px", color: "white" }} />
-           
               </CustomButton>
             ))}
-     
         </AppbarButton>
         {matches && (
           <>

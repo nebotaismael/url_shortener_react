@@ -21,11 +21,11 @@ export default function App() {
   return (
     <>
       <title>
-        Volunteers for Excellence Bilingual Nursery and Primary School
+        Shortly
       </title>
       <meta
         name="description"
-        content="Volunteers for Excellence Bilingual Nursery and Primary School"
+        content="Shortly"
       />
 
       <ThemeProvider theme={toggleTheme ? darkTheme : theme}>
