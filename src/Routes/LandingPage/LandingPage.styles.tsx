@@ -1,6 +1,7 @@
 import { styled } from "@mui/material/styles";
-import { Box  } from "@mui/material";
+import Box from "@mui/material/Box";
+
 export const Background = styled(Box)(({ theme }) => ({
-  background: theme.palette.warning.main,
-  padding:"7px 0px",
+  backgroundColor: "whitesmoke", // Use backgroundColor
+  padding: "7px 0px",
 }));

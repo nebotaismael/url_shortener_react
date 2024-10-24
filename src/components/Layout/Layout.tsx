@@ -1,4 +1,4 @@
-import React, { useEffect, useState } from "react";
+import React, { useState } from "react";
 
 import { Box } from "@mui/material";
 import { styled } from "@mui/material/styles";
@@ -6,6 +6,7 @@ import theme from "../../styles/theme";
 import Navbar from "../navbar/Navbar";
 
 import Footer from "../footer/Footer";
+import MobileDrawer from "../Modal/MobileDrawer";
 
 type WebsiteLayout = {
   children: React.ReactNode;
@@ -17,11 +18,27 @@ type WebsiteLayout = {
   setLight: React.Dispatch<React.SetStateAction<boolean>>;
 };
 
-const Layout = ({ children }: WebsiteLayout) => {
+const Layout = ({
+  children,
+  toggleTheme,
+  setToggleTheme,
+  light,
+  setLight,
+}: WebsiteLayout) => {
+  const [toggle, setToggle] = useState(false);
   return (
     <Wrappper>
-      <Navbar /><div>{children}</div>
-      
+      <Navbar
+        toggle={toggle}
+        setToggle={setToggle}
+        toggleTheme={toggleTheme}
+        setToggleTheme={setToggleTheme}
+        light={light}
+        setLight={setLight}
+      />
+        <MobileDrawer toggle={toggle} setToggle={setToggle} />
+      <div>{children}</div>
+
       <Footer />
     </Wrappper>
   );
@@ -35,7 +52,7 @@ export const Wrappper = styled(Box)({
   position: "relative",
 });
 export const BodyContainer = styled(Box)(({ theme }) => ({
-  color: theme.palette.text.secondary,
+  color: theme.palette.background.paper,
   padding: "50px 15px 15px 15px",
   // width: "100%",
   display: "flex",

@@ -1,4 +1,4 @@
-import { Box, Input, styled } from "@mui/material";
+import { Box, Card, Input, styled } from "@mui/material";
 
 import img1 from "../../images/bg-shorten-desktop.svg";
 import img2 from "../../images/bg-shorten-mobile.svg";
@@ -25,6 +25,21 @@ export const ShortenContainer = styled(Box)(({ theme }) => ({
     backgroundImage: `url(${img2})`,
     height: "auto",
     padding: "1rem",
+  },
+}));
+
+export const ShortenedUrlCard = styled(Card)(({ theme }) => ({
+  padding: "15px",
+  borderRadius: "5px",
+  boxShadow: "0 2px 4px rgba(0, 0, 0, 0.1)",
+  backgroundColor: "white",
+  width:"60%",
+  margin: 'auto',
+  marginBottom: "10px",
+  [theme.breakpoints.down("md")]: {
+    width: "90%",
+
+ 
   },
 }));
 export const ShortenInput = styled(Input)(({ theme }) => ({

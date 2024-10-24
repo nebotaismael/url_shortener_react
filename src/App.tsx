@@ -10,6 +10,8 @@ import theme, { darkTheme } from "./styles/theme";
 import { GlobalStyles } from "./styles/globals";
 import Layout from "./components/Layout/Layout";
 import LandingPage from "./Routes/LandingPage/LandingPage";
+import { Provider } from "react-redux";
+import { store } from "./redux/shortener/store";
 
 export default function App() {
   const [toggleTheme, setToggleTheme] = useState(false);
@@ -27,6 +29,7 @@ export default function App() {
       />
 
       <ThemeProvider theme={toggleTheme ? darkTheme : theme}>
+        <Provider store={store}>
         <Router>
           <Layout
             toggleTheme={toggleTheme}
@@ -45,6 +48,7 @@ export default function App() {
             <ToastContainer />
           </Layout>
         </Router>
+        </Provider>
       </ThemeProvider>
     </>
   );

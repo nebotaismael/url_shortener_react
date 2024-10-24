@@ -1,17 +1,18 @@
 import About from "../../components/about/About";
 import Boost from "../../components/boost/Boost";
 import Hero from "../../components/hero/Hero";
-import Shorten from "../../components/shorten/Shorten";
+import Shorten from "../../components/shorten/UrLShortener";
+
 import { Background } from "./LandingPage.styles";
 
 export default function LandingPage() {
   return (
     <Background>
       <Hero />
-      <Shorten/>
-   
- <About/>
- <Boost/>
+      <Shorten />
+
+      <About />
+      <Boost />
     </Background>
   );
 }
