@@ -8,6 +8,7 @@ export const FooterContainer = styled(Box)(({ theme }) => ({
   paddingTop: "3rem",
   paddingBottom: "4rem",
   paddingLeft: "5rem",
+  overflow:"hidden",
   [theme.breakpoints.down("md")]: {
     marginTop: "0rem",
     minWidth: "50%",

@@ -5,6 +5,7 @@ export const NavbarContainer = styled(Box)(({ theme }) => ({
   marginRight: "2rem",
   flexDirection: "row",
   margin:"0 auto",
+  overflow:"hidden",
   [theme.breakpoints.down("md")]: {
    
   },

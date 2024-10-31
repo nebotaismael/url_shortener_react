@@ -45,6 +45,7 @@ export const BoostButton = styled(Button)(({ theme }) => ({
   fontWeight: "bold",
   paddingLeft: "20px",
   paddingTop: "5px",
+  overflow:"hidden",
   textAlign: "center",
   paddingBottom: "1px",
   display: "flex",

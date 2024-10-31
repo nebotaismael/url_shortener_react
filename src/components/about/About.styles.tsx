@@ -12,9 +12,11 @@ export const AboutContainer = styled(Box)(({ theme }) => ({
   paddingRight: "1rem",
   marginTop: "-10vh",
   zIndex: 1,
+  overflow:"hidden",
   [theme.breakpoints.down("md")]: {
     paddingTop: "10vh",
     paddingBottom: "7rem",
+      marginTop: "-10vh",
   },
 }));
 
