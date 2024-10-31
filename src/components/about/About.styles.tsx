@@ -8,10 +8,10 @@ export const AboutContainer = styled(Box)(({ theme }) => ({
   position: "relative",
   paddingTop: "5rem",
   paddingBottom: "5rem",
-  paddingLeft: "1rem", 
+  paddingLeft: "1rem",
   paddingRight: "1rem",
-  marginTop:"-50vh", 
-  zIndex:1,
+  marginTop: "-10vh",
+  zIndex: 1,
   [theme.breakpoints.down("md")]: {
     paddingTop: "10vh",
     paddingBottom: "7rem",
@@ -53,18 +53,16 @@ export const BrandCard = styled(Box)(({ theme }) => ({
   maxWidth: "300px",
   margin: "1rem",
   padding: "2rem",
-  paddingTop:"10vh",
+  paddingTop: "10vh",
   backgroundColor: "#fff",
   boxShadow: "0 4px 8px rgba(0, 0, 0, 0.1)",
   position: "relative",
- 
+
   [theme.breakpoints.down("md")]: {
     margin: "1rem 0",
     top: "0",
   },
 }));
-
-
 
 export const CardImage = styled(Box)(({ theme }) => ({
   position: "absolute",
@@ -78,7 +76,6 @@ export const CardImage = styled(Box)(({ theme }) => ({
   "& img": {
     width: "50px",
     height: "50px",
-  
   },
   [theme.breakpoints.down("md")]: {
     left: "50%",
@@ -92,20 +89,17 @@ export const DividerLine = styled(Divider)(({ theme }) => ({
   margin: "-10px",
   position: "relative",
   top: "30vh",
-  zIndex: 0, 
-    [theme.breakpoints.down("md")]: {
-  display: "none",
+  zIndex: 0,
+  [theme.breakpoints.down("md")]: {
+    display: "none",
   },
 }));
 export const DividerLinetwo = styled(Divider)(({ theme }) => ({
- display:'none',
-    [theme.breakpoints.down("md")]: {
-      backgroundColor: "cyan",
-      minHeight: "100vh",
-      width: "100%",
-    
-    
-    
+  display: "none",
+  [theme.breakpoints.down("md")]: {
+    backgroundColor: "cyan",
+    minHeight: "100vh",
+    width: "100%",
   },
 }));
 
@@ -113,11 +107,10 @@ export const CardRow = styled(Box)(({ theme }) => ({
   display: "flex",
   flexDirection: "row",
   justifyContent: "center",
-  width:"100%",
+  width: "100%",
 
   [theme.breakpoints.down("md")]: {
     flexDirection: "column",
     alignItems: "center",
-    
   },
 }));
