@@ -31,14 +31,7 @@ export default function App() {
       <ThemeProvider theme={toggleTheme ? darkTheme : theme}>
         <Provider store={store}>
         <Router>
-          <Layout
-            toggleTheme={toggleTheme}
-            setToggleTheme={setToggleTheme}
-            toggle={toggle}
-            setToggle={setToggle}
-            light={light}
-            setLight={setLight}
-          >
+      
             <Routes>
               <Route path="/">
                 <Route index element={<LandingPage />} />
@@ -46,7 +39,7 @@ export default function App() {
             </Routes>
             <GlobalStyles />
             <ToastContainer />
-          </Layout>
+        
         </Router>
         </Provider>
       </ThemeProvider>

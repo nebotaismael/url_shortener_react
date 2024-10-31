@@ -19,6 +19,7 @@ const Colors = {
   neutralVeryDarkViolet: "hsl(260, 8%, 14%)",
   white: "#fff",
   black: "#000",
+  whitesmoke:  "#f5f5f5",
 };
 
 const theme = createTheme({
@@ -46,14 +47,14 @@ const theme = createTheme({
       main: Colors.primary,
     },
     secondary: {
-      main: Colors.secondary,
+      main: Colors.whitesmoke,
     },
     text: {
       primary: Colors.black,
       secondary: Colors.white,
     },
     background: {
-      paper: Colors.neutralGray,
+      paper: Colors.white,
       default: Colors.neutralVeryDarkViolet,
     },
     grey: {

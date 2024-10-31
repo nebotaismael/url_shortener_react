@@ -8,12 +8,15 @@ export const HeroContainer = styled(Box)(({ theme }) => ({
   justifyContent: "center",
   padding: "4rem 8rem",
   maxWidth: "100%",
- // margin: "80 1000",
+  width: "100%",
+  backgroundColor: "white",
+  overflow: "hidden", // Prevent horizontal scrolling
+  paddingBottom:"9rem",
   [theme.breakpoints.down("md")]: {
-    
     flexDirection: "column-reverse",
     textAlign: "center",
     padding: "4rem 2rem",
+    paddingBottom:"9rem",
     margin: "0 auto",
   },
 }));
@@ -67,20 +70,22 @@ export const HeroButton = styled(Button)(({ theme }) => ({
     backgroundColor: "darkcyan",
   },
   [theme.breakpoints.down("md")]: {
-    width: "80%",
+
   },
 }));
 
 export const HeroContainerRight = styled(Box)(({ theme }) => ({
   width: "100%",
   backgroundImage: `url(${hero})`,
-  backgroundSize: "contain",
+  backgroundSize: "100%",
   backgroundRepeat: "no-repeat",
   backgroundPosition: "center",
   height: "50vh",
+  transform: "translateX(30%) scale(1.2)", // Translate to the right
   [theme.breakpoints.down("md")]: {
     width: "100%",
     height: "250px",
     marginBottom: "2rem",
+    transform: "translateX(30%) scale(1.5)",
   },
 }));

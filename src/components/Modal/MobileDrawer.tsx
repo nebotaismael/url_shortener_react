@@ -2,7 +2,7 @@ import React from "react";
 import { Drawer } from "@mui/material";
 
 import { Link } from "react-router-dom";
-import { AppbarLinks, AppbarItem } from "../navbar/Navbar.styles";
+
 import { MobileNavbarWrapper } from "./MobileDrawer.styles";
 
 type NavbarProps = {
@@ -45,23 +45,7 @@ const MobileDrawer: React.FC<NavbarProps> = ({ toggle, setToggle }) => {
           </Typography>
           <hr /> */}
 
-          <AppbarLinks flexDirection="column" alignItems="end">
-            <AppbarItem variant="body1">
-              <Link to="/">Home</Link>
-            </AppbarItem>
-            <AppbarItem variant="body1">
-              <Link to="/about">About</Link>
-            </AppbarItem>
-            <AppbarItem variant="body1">
-              <Link to="/join">Join</Link>
-            </AppbarItem>
-            <AppbarItem variant="body1">
-              <Link to="/Contact">Contact</Link>
-            </AppbarItem>
-            <AppbarItem variant="body1">
-              <Link to="/faq">FAQ</Link>
-            </AppbarItem>
-          </AppbarLinks>
+   
         </MobileNavbarWrapper>
       </Drawer>
     </>

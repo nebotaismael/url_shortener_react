@@ -2,7 +2,7 @@ import { Box, styled, Typography } from "@mui/material";
 import img1 from "../../images/footerlogo.svg";
 
 export const FooterContainer = styled(Box)(({ theme }) => ({
-  backgroundColor: "black",
+  backgroundColor: theme.palette.background.default,
   display: "flex",
   flexDirection: "row",
   paddingTop: "3rem",
@@ -10,10 +10,12 @@ export const FooterContainer = styled(Box)(({ theme }) => ({
   paddingLeft: "5rem",
   [theme.breakpoints.down("md")]: {
     marginTop: "0rem",
-    minWidth: "95%",
+    minWidth: "50%",
     display: "flex",
     flexDirection: "column",
-    paddingLeft: "2rem",
+    paddingLeft: "0rem",
+    maxWidth: "100%",
+    width: "100%",
   },
 }));
 
@@ -23,7 +25,8 @@ export const FooterColumn = styled(Box)(({ theme }) => ({
   marginLeft: "5rem",
   marginTop: "2rem",
   [theme.breakpoints.down("md")]: {
-    marginLeft: "4rem",
+    marginLeft: "0rem",
+    textAlign: "center",
   },
 }));
 
@@ -45,10 +48,16 @@ export const FooterText = styled(Typography)(({ theme }) => ({
   color: "white",
   fontWeight: "100",
   lineHeight: "2rem",
+  [theme.breakpoints.down("md")]: {
+    fontSize: "1rem",
+    color: "white",
+    fontWeight: "100",
+    marginBottom: "2rem",
+  },
 }));
 export const FooterIcon = styled(Box)(({ theme }) => ({
-  height: "30px",
-  width: "10px",
+  height: "60px",
+  width: "20px",
   marginLeft: "1rem",
   marginRight: "1rem",
   [theme.breakpoints.down("md")]: {
@@ -66,7 +75,7 @@ export const FooterRow = styled(Box)(({ theme }) => ({
   height: "30px",
   marginTop: "2rem",
   [theme.breakpoints.down("md")]: {
-    marginLeft: "1rem",
+    marginLeft: "3rem",
     marginRight: "5rem",
   },
 }));
@@ -79,4 +88,7 @@ export const FooterLogo = styled(Box)(({ theme }) => ({
   marginTop: "2rem",
   backgroundImage: `url(${img1})`,
   fill: "white",
+  [theme.breakpoints.down("md")]: {
+    marginLeft: "35vw",
+  },
 }));

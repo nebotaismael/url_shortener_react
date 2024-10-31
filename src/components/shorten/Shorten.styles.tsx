@@ -15,14 +15,17 @@ export const ShortenContainer = styled(Box)(({ theme }) => ({
   flexDirection: "row",
   backgroundImage: `url(${img1})`,
   height: "15vh",
-  marginBottom: "15px",
+  marginBottom: "15px", marginTop: "-65px",
   padding: "1rem",
   alignItems: "center",
+  zIndex:2,
+
 
   [theme.breakpoints.down("md")]: {
     flexDirection: "column",
     width: "90%",
     backgroundImage: `url(${img2})`,
+    backgroundSize: "10vw",
     height: "auto",
     padding: "1rem",
   },
@@ -70,10 +73,11 @@ export const ShortenButton = styled(Box)(({ theme }) => ({
 
   "&:hover": {
     backgroundColor: "rgba(0,255,255,0.5)",
+
   },
 
   [theme.breakpoints.down("md")]: {
-    width: "100%",
+    width: "100%",maxWidth:'100%',minWidth:'50%',
     padding: "0.75rem",
   },
 }));

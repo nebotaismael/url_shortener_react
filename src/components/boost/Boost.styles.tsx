@@ -1,25 +1,29 @@
-import { Box, Button, styled, Typography } from "@mui/material";
+import { Box, Button, Input, styled, Typography } from "@mui/material";
 import img2 from "../../images/bg-boost-mobile.svg";
 import img1 from "../../images/bg-boost-desktop.svg";
-
 export const BoostContainer = styled(Box)(({ theme }) => ({
   position: "relative",
   display: "flex",
-  minWidth: "1330px",
+  minWidth: "100%",
   backgroundRepeat: "no-repeat",
   backgroundColor: "rgba(40,20,66,1)",
-  paddingRight: "1rem",
   flexDirection: "column",
   backgroundImage: `url(${img1})`,
   marginTop: "0rem",
   minHeight: "240px",
-  backgroundSize: "contain",
+  backgroundSize: "100%",
   backgroundPositionY: "start",
+  paddingLeft: "2em",
   [theme.breakpoints.down("md")]: {
     marginTop: "0rem",
-    minWidth: "100%",
+    minWidth: "50%",
     backgroundImage: `url(${img2})`,
-    minHeight: "270px",
+    height: "35vh",
+    backgroundSize: "390px",
+    backgroundPositionX: "right",
+    backgroundPositionY: "left",
+    maxWidth: "100%",
+    paddingLeft: "1em",
   },
 }));
 
@@ -37,18 +41,29 @@ export const BoostText = styled(Typography)(({ theme }) => ({
   },
 }));
 
-export const HeroButton = styled(Button)(({ theme }) => ({
+export const BoostButton = styled(Button)(({ theme }) => ({
   fontWeight: "bold",
-  padding: "12px 36px",
+  paddingLeft: "20px",
+  paddingTop: "5px",
+  textAlign: "center",
+  paddingBottom: "1px",
+  display: "flex",
   color: "white",
-  backgroundColor: "cyan",
-  borderRadius: "30px",
-  margin: "0 auto",
-  width: "20%",
-  "&:hover": {
-    backgroundColor: "darkcyan",
+  backgroundColor: "rgba(0,255,255,0.9)",
+  borderRadius: "50px",
+  height: "50px",
+  maxWidth: "200px",
+  marginLeft: "40vw",
+  flexDirection: "row", 
+  marginTop: "3rem",
+  "&: hover": {
+    backgroundColor: "rgba(0,255,255,0.5)",
+    fontWeight: "bold",
   },
   [theme.breakpoints.down("md")]: {
-    width: "80%",
+
+    marginTop: "1rem",
+    width: "50%",
+    marginLeft: "25vw",
   },
 }));

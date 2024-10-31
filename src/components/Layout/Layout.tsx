@@ -28,14 +28,7 @@ const Layout = ({
   const [toggle, setToggle] = useState(false);
   return (
     <Wrappper>
-      <Navbar
-        toggle={toggle}
-        setToggle={setToggle}
-        toggleTheme={toggleTheme}
-        setToggleTheme={setToggleTheme}
-        light={light}
-        setLight={setLight}
-      />
+    
         <MobileDrawer toggle={toggle} setToggle={setToggle} />
       <div>{children}</div>
 
